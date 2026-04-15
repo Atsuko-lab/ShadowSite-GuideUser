@@ -2,7 +2,7 @@
 
 Quiz PWA gratuit : devine le Pokémon caché par son ombre ! 1025 Pokémon (Gen I–IX), 6 modes de jeu, classements en ligne, succès, quêtes quotidiennes, système shiny et bien plus. Jouable sur mobile et desktop, en 4 langues (🇫🇷 🇬🇧 🇪🇸 🇯🇵).
 
-**🔗 [Shadow SITE - Pokémon Edition](([https://pokequiz-e266a.web.app/](https://shadowsitepoke.vercel.app/)])**
+🔗 [Shadow SITE - Pokémon Edition](https://shadowsitepoke.vercel.app/)
 
 ---
 
