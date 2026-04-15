@@ -1,50 +1,57 @@
 # Shadow Quiz — Pokémon Edition
 
-Un jeu de quiz PWA où tu dois deviner des Pokémon à partir de leur ombre ! Disponible sur mobile et desktop.
+Quiz PWA gratuit : devine le Pokémon caché par son ombre ! 1025 Pokémon (Gen I–IX), 6 modes de jeu, classements en ligne, succès, quêtes quotidiennes, système shiny et bien plus. Jouable sur mobile et desktop, en 4 langues (🇫🇷 🇬🇧 🇪🇸 🇯🇵).
+
+**🔗 [pokequiz-e266a.web.app](https://pokequiz-e266a.web.app/)**
+
+---
 
 ## 🎮 Modes de jeu
 
 ### Mode Normal
-Devine le Pokémon caché derrière son ombre. La difficulté augmente progressivement en 11 niveaux, jusqu'au mode **Chaos** (600+) où le palier est tiré au hasard à chaque question :
+Devine le Pokémon caché derrière son ombre. La difficulté augmente progressivement en 11 paliers, jusqu'au mode **Chaos** (600+) où le niveau est aléatoire à chaque question :
 
 | Palier | Score | Choix | Temps | Effet visuel |
 |--------|-------|-------|-------|--------------|
 | 🟢 Débutant | 0–20 | 4 | 10s | Silhouette normale |
-| 🟡 Novice | 21–50 | 4 | 5s | Silhouette normale, tempo rapide |
-| 🟠 Chasseur | 51–74 | 6 | 10s | Silhouette normale |
-| 🔴 Dresseur | 75–100 | 6 | 5s | Silhouette normale, tempo rapide |
-| 🟣 Expert | 101–150 | 4 | 10s | Silhouette légèrement floue (~5px) |
-| ⚫ Maître | 151–200 | 4 | 10s | Miroir inversé |
-| 💀 Élite | 201–280 | 4 | 10s | Rotation aléatoire |
-| 👁️ Légendaire | 281–380 | 6 | 10s | Miroir inversé |
-| ⭐ Champion | 381–500 | 6 | 10s | Rotation aléatoire |
+| 🟡 Novice | 21–50 | 4 | 5s | Tempo rapide |
+| 🟠 Chasseur | 51–74 | 6 | 10s | 6 choix |
+| 🔴 Dresseur | 75–100 | 6 | 5s | 6 choix, tempo rapide |
+| 🟣 Expert | 101–150 | 4 | 10s | 🌫️ Silhouette floue |
+| ⚫ Maître | 151–200 | 4 | 10s | 🪞 Miroir inversé |
+| 💀 Élite | 201–280 | 4 | 10s | 🔄 Rotation aléatoire |
+| 👁️ Légendaire | 281–380 | 6 | 10s | 🪞 Miroir + 6 choix |
+| ⭐ Champion | 381–500 | 6 | 10s | 🔄 Rotation + 6 choix |
 | 🌑 Ombre Pure | 501–599 | Saisie libre | 15s | Silhouette noire classique |
-| 🎲 Chaos | 600+ | Aléatoire | Aléatoire | Palier aléatoire parmi tous |
+| 🎲 Chaos | 600+ | Aléatoire | Aléatoire | Palier aléatoire ! |
 
-Mauvaise réponse ou temps écoulé = fin de partie.
+- **Bonus vitesse** : +2 pts si tu réponds en moins de 3 secondes, +1 sinon
+- Mauvaise réponse ou temps écoulé = fin de partie
 
-### Contre-la-Montre
-60 secondes pour deviner un maximum de Pokémon. 4 choix par question. Pas de pénalité sur erreur — on passe au suivant.
+### ⏱️ Contre-la-Montre
+60 secondes pour deviner un maximum de Pokémon. 4 choix par question, pas de pénalité sur erreur.
 
-### Avec un Ami
-Même série de Pokémon, comparez vos scores en temps réel. Crée une partie et partage le code. Difficulté fixe : 4 choix · 10s.
+### 🔗 Avec un Ami
+Même série de Pokémon (seed partagé), comparez vos scores en temps réel. Crée une partie, partage le code, et c'est parti ! Difficulté fixe : 4 choix · 10s. Détection de déconnexion par heartbeat.
 
-### Entraînement
-Apprends sans pression : pas de timer, pas de score. Choisis la génération à entraîner. Les Pokémon devinés ne comptent pas dans le Pokédex.
+### 🎓 Entraînement
+Apprends sans pression : pas de timer, pas de score. Choisis la génération à entraîner (Gen I à IX ou toutes). Ne compte pas dans le Pokédex.
 
-### Mode Inversé 🌑
-Tu vois le **nom** du Pokémon, tu dois reconnaître sa **silhouette** parmi 4 images. 10 secondes par question. Mauvaise réponse = fin. Teste ta mémoire visuelle !
+### 🌑 Mode Inversé
+Tu vois le **nom** du Pokémon, tu dois reconnaître sa **silhouette** parmi 4 images. 10s par question. Teste ta mémoire visuelle !
 
-### Mode Son 🔊
-Le **cri** du Pokémon est joué automatiquement. Tu dois deviner son **nom** parmi 4 choix. 12 secondes par question. Appuie sur 🔊 pour réécouter. Mauvaise réponse = fin.
+### 🔊 Mode Son
+Le **cri** du Pokémon est joué automatiquement. Devine son **nom** parmi 4 choix. 12s par question. Appuie sur 🔊 pour réécouter.
+
+---
 
 ## ✨ Système Shiny
 
 Les Pokémon shiny apparaissent **uniquement en Mode Normal** — ils s'affichent en couleur (sans filtre ombre), il faut les reconnaître à vue.
 
-Le taux part de **1/750** et double à chaque palier de difficulté, jusqu'à **1/16** max :
+Le taux de base est **1/750** et double à chaque palier de difficulté, plafonné à **1/16** :
 
-| Niveau | Score | Taux shiny |
+| Palier | Score | Taux shiny |
 |--------|-------|-----------|
 | 0 – Débutant | 0–20 | 1/750 |
 | 1 – Novice | 21–50 | 1/375 |
@@ -52,165 +59,187 @@ Le taux part de **1/750** et double à chaque palier de difficulté, jusqu'à **
 | 3 – Dresseur | 75–100 | 1/93 |
 | 4 – Expert | 101–150 | 1/46 |
 | 5 – Maître | 151–200 | 1/23 |
-| 6 – Élite | 201–280 | 1/16 |
-| 7 – Légendaire | 281–380 | 1/16 |
-| 8 – Champion | 381–500 | 1/16 |
-| 9 – Ombre Pure | 501–599 | 1/16 |
-| 🎲 Chaos | 600+ | 1/16 |
+| 6+ | 201+ | 1/16 (max) |
 
-Le taux est **identique** pour tous les Pokémon, légendaires inclus.
-
-Les shiny trouvés sont visibles dans la section **Shiny** du Pokédex.
+Le taux est identique pour tous les Pokémon, légendaires inclus. Les shiny trouvés sont visibles dans la section **Shiny** du Pokédex.
 
 ## 🐉 Pokémon Légendaires
 
-Les légendaires sont **plus rares à rencontrer** en Mode Normal.
+Les légendaires (~80 Pokémon) sont **plus rares à rencontrer** en Mode Normal.
 
 Le taux de base est **1/25** et **double à chaque badge** obtenu :
 
 | Badges | Taux légendaire |
 |--------|----------------|
 | 0 | 1/25 |
-| 1 (🌱 Dresseur) | 1/12 |
-| 2 (⚔️ Challenger) | 1/6 |
-| 3 (🏅 Champion) | 1/3 |
-| 4+ (💎 Élite…) | ~100% |
+| 1 (🌱) | 1/12 |
+| 2 (⚔️) | 1/6 |
+| 3 (🏅) | 1/3 |
+| 4+ (💎…) | ~100% |
 
-Plus tu as de badges (basés sur ton niveau XP), plus tu as de chances de croiser un légendaire.
-
-## 🏆 Succès
-
-62 succès répartis en 10 catégories :
-- **Classique** — Score et progression (7 succès)
-- **Chrono** — Performance contre-la-montre (3 succès)
-- **Daily** — Défis quotidiens et streaks (6 succès)
-- **Pokédex** — Découverte de Pokémon (5 succès)
-- **Type** — Maîtriser chaque type (50 Pokémon par type · 18 succès)
-- **Entraînement** — Compléter chaque génération (9 succès)
-- **Général** — Nombre de parties jouées (3 succès)
-- **Spécial** — Événements rares (nuit, dimanche, Rayquaza... · 5 succès)
-- **Inversé** — Progresser en Mode Inversé (3 succès)
-- **Son** — Progresser en Mode Son (3 succès)
-
-## 🖼️ Fonds d'écran
-
-Débloque des fonds d'écran en progressant :
-- **18 types** — Découvrir 50 Pokémon de chaque type
-- **Rayquaza** — Attraper Rayquaza
-- **All Pokémon** — Compléter le Pokédex
+---
 
 ## 📅 Daily Challenge
 
-Un Pokémon par jour, 5 essais max. Maintiens ta streak quotidienne !
+Un Pokémon par jour, identique pour tous les joueurs. 5 essais max en saisie libre. Maintiens ta streak quotidienne pour grimper dans le classement Streaks !
+
+## 📋 Quêtes quotidiennes
+
+5 quêtes renouvelées chaque jour, piochées parmi 58 quêtes possibles sur 5 niveaux de difficulté (facile → légendaire). Exemples : deviner X Pokémon, faire un speed bonus, jouer un mode spécifique, trouver un légendaire… Chaque quête terminée rapporte de l'XP (10 à 200 XP).
+
+---
 
 ## 🏅 Badges & Niveau XP
 
-Le système de progression est basé sur l'XP accumulée en jouant :
+L'XP s'accumule en jouant et en complétant des quêtes. La formule est exponentielle : `XP(n) = 10 × n^1.6`.
 
 | Badge | Niveau requis |
 |-------|--------------|
-| 🌱 Dresseur | 1 |
+| 🌱 Dresseur Débutant | 1 |
 | ⚔️ Challenger | 5 |
 | 🏅 Champion | 10 |
 | 💎 Élite | 20 |
 | 👑 Maître Pokémon | 35 |
 | 🌟 Légendaire | 50 |
 
-Les Poké Balls associées au niveau (Poké Ball → Super Ball → Hyper Ball → Premier Ball → Luxury Ball → Master Ball → Cherish Ball) sont visibles dans le profil.
+**Poké Balls** associées au niveau : Poké Ball (1) → Super Ball (5) → Hyper Ball (10) → Premier Ball (20) → Luxury Ball (30) → Master Ball (50) → Cherish Ball (75).
 
-Plus tu as de badges, plus tu as de chances de croiser un légendaire en Mode Normal.
+Plus tu as de badges, plus tu as de chances de croiser un légendaire.
 
-## 📖 Pokédex
+---
 
-Découvre les 1025 Pokémon et gère ta collection :
-- **Filtres** : Tous / Découverts / Inconnus / Favoris
-- **Favoris** : Marque tes Pokémon préférés avec ❤️
-- **Shiny** : Retrouve tous les shiny capturés
-- Organisé par génération avec statistiques de complétion
+## 🏆 Succès
 
-## 🕹️ Historique des parties
+**72 succès** répartis en 10 catégories :
 
-Les 10 dernières parties sont sauvegardées et visibles dans ton profil : mode, score, Pokémon qui t'a arrêté.
+| Catégorie | Nombre | Exemples |
+|-----------|--------|----------|
+| 🎮 Classique | 7 | 1er Pokémon, 100 pts, 500 pts, 1000 pts… |
+| ⏱️ Chrono | 3 | 10, 20, 30 Pokémon en 60s |
+| 📅 Daily | 6 | 1er daily, 1er essai, streak 7j/30j/100j |
+| 📖 Pokédex | 5 | 10, 151, 300, 500 Pokémon + Pokédex complet |
+| 🔥 Type | 18 | 50 Pokémon découverts par type |
+| 🎓 Entraînement | 9 | Compléter chaque génération |
+| 🎲 Général | 3 | 10, 50, 100 parties classiques |
+| ⭐ Spécial | 5 | Jouer de nuit, le dimanche, trouver Rayquaza… |
+| 🌑 Inversé | 3 | 10, 25, 50 pts en Inversé |
+| 🔊 Son | 3 | 10, 25, 50 pts en Son |
 
-## 🎨 Fonctionnalités visuelles
+20 succès débloquent des fonds d'écran.
 
-- **Animation d'apparition** : La silhouette se matérialise à chaque nouvelle question
-- **Transition de score** : Le score s'anime visuellement quand il augmente
-- **Effets de difficulté** : Révélation progressive, flou croissant, miroir, rotation, miniature, couleurs floues, flash selon le palier atteint
-- **Vibration** : Retour haptique au bon/mauvais choix (appareils compatibles)
-- **Sons de victoire** : 5 niveaux de sons selon le score final
+## 🖼️ Fonds d'écran (22)
+
+- **Défaut** (toujours débloqué)
+- **18 types** — Découvrir 50 Pokémon de chaque type
+- **Évoli** — Découvrir les 9 Évolitions
+- **Rayquaza** — Découvrir Rayquaza
+- **All** — Compléter le Pokédex
+
+---
+
+## 🏆 Classements (6 onglets)
+
+| Onglet | Classement |
+|--------|------------|
+| 🏆 Top | Meilleurs scores classiques |
+| ⏱️ Chrono | Meilleurs scores contre-la-montre |
+| 🔥 Streaks | Plus longues streaks daily |
+| 📅 Semaine | Scores de la semaine (reset lundi) |
+| 🌑 Inversé | Meilleurs scores inversé |
+| 🔊 Son | Meilleurs scores son |
+
+Cache 30s, pagination (100 par page), clic sur un joueur pour voir son profil.
+
+---
+
+## 👤 Profil
+
+- Barre d'XP avec niveau et Poké Ball
+- Meilleurs scores par mode
+- Stats : Pokémon devinés, best streak, taux de réussite, score moyen, streak daily, nombre de succès
+- Historique des 10 dernières parties
+- **Pokédex** avec filtres (Tous / Découverts / Inconnus / Favoris / Shiny)
+- Popup détaillé par Pokémon (stats, types, shiny)
+- Système de favoris ❤️
+- **Carte de profil partageable** (image générée en Canvas)
+- Profil public via `?uid=<id>`
+
+---
+
+## 🎨 Fonctionnalités
+
+- 🌙 **Mode sombre** avec bascule dans les paramètres
+- 🌍 **4 langues** : français, anglais, espagnol, japonais
+- 📱 **PWA installable** avec mode offline, page de fallback, et mise à jour automatique
+- 🔔 **Notifications push** : rappel du daily (00h) + rappel ciblé si daily/quêtes non faits (20h)
+- 🔊 **4 pistes musicales** + effets sonores, volume réglable
+- 📳 **Vibration haptique** au bon/mauvais choix
+- 🎆 **Confetti** sur les événements spéciaux
+- 🖼️ **22 fonds d'écran** déblocables
+- 🔒 **Validation serveur** des scores via Cloud Function
+
+---
 
 ## 🛠️ Stack technique
 
-- **Frontend** : HTML/CSS/JS vanilla avec ES Modules
-- **Backend** : Firebase (Firestore + Auth anonyme)
-- **PWA** : Service Worker pour le cache et l'utilisation offline
-- **Données** : 1025 Pokémon (Générations I à IX)
+| Composant | Technologie |
+|-----------|-------------|
+| Frontend | HTML / CSS / JS vanilla (ES Modules) |
+| Backend | Firebase (Firestore + Auth anonyme + Google Sign-In) |
+| Cloud Functions | Firebase Functions v2 (Node.js 20) |
+| Push | Web Push (VAPID) via `web-push` |
+| Mobile | Capacitor 6 (Android) |
+| PWA | Service Worker + manifest + offline fallback |
+| Données | 1025 Pokémon (JSON statique, Gen I–IX) |
 
 ## 📂 Structure
 
 ```
 ├── index.html              Page principale
-├── sw.js                   Service Worker
+├── offline.html            Page offline (fallback SW)
+├── sw.js                   Service Worker (v2.7.3)
 ├── manifest.json           Manifest PWA
-├── firestore.rules         Règles de sécurité Firebase
+├── firestore.rules         Règles de sécurité Firestore
+├── functions/
+│   └── index.js            Cloud Functions (notifications + validation)
 ├── js/
 │   ├── core/               Modules fondamentaux
-│   │   ├── config.js       Configuration Firebase
+│   │   ├── config.js       Configuration Firebase + App Check
 │   │   ├── data.js         Chargement des données Pokémon
-│   │   ├── auth.js         Authentification Firebase
+│   │   ├── auth.js         Authentification (anonyme + Google)
+│   │   ├── i18n.js         Internationalisation (4 langues)
 │   │   ├── utils.js        Fonctions utilitaires
 │   │   ├── toast.js        Notifications toast
 │   │   ├── badges.js       Système de badges
 │   │   ├── xp.js           Système de niveaux XP
 │   │   ├── quests.js       Quêtes quotidiennes
 │   │   ├── migration.js    Migration des données locales
-│   │   └── audio.js        Gestion audio
+│   │   ├── audio.js        Gestion audio (Web Audio API)
+│   │   └── ads.js          Gestion publicités
 │   ├── modes/              Modes de jeu
-│   │   ├── game.js         Mode Normal (ombres, shiny, pokédex)
-│   │   ├── daily.js        Mode Daily
-│   │   ├── timerGame.js    Mode Contre-la-montre
-│   │   ├── friendGame.js   Mode Ami (multijoueur)
+│   │   ├── game.js         Mode Normal (ombres, shiny, légendaires)
+│   │   ├── daily.js        Daily Challenge
+│   │   ├── timerGame.js    Contre-la-montre (60s)
+│   │   ├── friendGame.js   Mode Ami (multijoueur temps réel)
 │   │   ├── inverseGame.js  Mode Inversé (nom → silhouette)
 │   │   ├── soundGame.js    Mode Son (cri → nom)
-│   │   └── training.js     Mode Entraînement
+│   │   └── training.js     Entraînement (par génération)
 │   └── ui/                 Interface utilisateur
-│       ├── main.js         Initialisation et navigation
-│       ├── profile.js      Profil et Pokédex
-│       ├── leaderboard.js  Classements
-│       ├── settings.js     Paramètres et fonds d'écran
-│       ├── achievements.js Système de succès
-│       └── achievements_screen.js  Écran des succès
+│       ├── main.js         Initialisation, navigation, SW
+│       ├── profile.js      Profil, Pokédex, carte partageable
+│       ├── leaderboard.js  Classements (cache + pagination)
+│       ├── settings.js     Paramètres, thème, fonds d'écran
+│       ├── achievements.js Logique des 72 succès
+│       ├── achievements_screen.js  Écran des succès
+│       └── quests_screen.js Écran des quêtes du jour
 ├── css/
-│   ├── base/               Styles de base
-│   │   ├── base.css        Variables, reset, wallpapers
-│   │   ├── buttons.css     Boutons
-│   │   └── dark.css        Mode sombre
-│   ├── components/         Composants UI
-│   │   ├── header.css      En-tête
-│   │   ├── modal.css       Modales
-│   │   ├── rules.css       Info des modes
-│   │   ├── achievements.css Succès
-│   │   ├── quests.css      Quêtes du jour
-│   │   └── ads.css         Publicités & bannières UI
-│   └── screens/            Écrans
-│       ├── game.css        Écran de jeu
-│       ├── daily.css       Écran daily
-│       ├── leaderboard.css Classements
-│       └── profile.css     Profil
-├── image/
-│   ├── icons/              Icônes et logo
-│   ├── types/              Fonds par type Pokémon
-│   └── wallpapers/         Fonds spéciaux
-├── data/                   Données Pokémon (JSON + scripts Python)
-└── audio/                  Musiques et effets sonores
+│   ├── base/               base.css · buttons.css · dark.css
+│   ├── components/         header · modal · rules · achievements · quests · ads
+│   └── screens/            game · daily · leaderboard · profile
+├── data/                   pokemon.json · quests.json · names_*.json · scripts Python
+├── image/                  icons · types · wallpapers · pokeballs · badges
+└── audio/                  Musiques (.ogg) et effets sonores (.mp3)
 ```
-
-## 🚀 Déploiement
-
-1. Configurer Firebase dans `js/config.js`
-2. Déployer les règles Firestore : `firebase deploy --only firestore:rules`
-3. Servir les fichiers statiques (Firebase Hosting, Netlify, etc.)
 
 ## 📝 Licence
 
