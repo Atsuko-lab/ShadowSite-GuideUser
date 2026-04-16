@@ -25,8 +25,9 @@ Devine le Pokémon caché derrière son ombre. La difficulté augmente progressi
 | 🌑 Ombre Pure | 501–599 | Saisie libre | 15s | Silhouette noire classique |
 | 🎲 Chaos | 600+ | Aléatoire | Aléatoire | Palier aléatoire ! |
 
-- **Bonus vitesse** : +2 pts si tu réponds en moins de 3 secondes, +1 sinon
+- **Bonus vitesse / combo** : réponse rapide en moins de 2 secondes ; combo actif dès 2 réponses rapides d'affilée ; gain plafonné à 5 pts maximum par bonne réponse
 - Mauvaise réponse ou temps écoulé = fin de partie
+- La rotation aléatoire a été améliorée pour limiter les répétitions fréquentes des mêmes Pokémon
 
 ### ⏱️ Contre-la-Montre
 60 secondes pour deviner un maximum de Pokémon. 4 choix par question, pas de pénalité sur erreur.
@@ -49,17 +50,20 @@ Le **cri** du Pokémon est joué automatiquement. Devine son **nom** parmi 4 cho
 
 Les Pokémon shiny apparaissent **uniquement en Mode Normal** — ils s'affichent en couleur (sans filtre ombre), il faut les reconnaître à vue.
 
-Le taux de base est **1/750** et double à chaque palier de difficulté, plafonné à **1/16** :
+Le taux de base est **1/750** et diminue par paliers de score, avec un cap à **1/50** dès 250 points :
 
-| Palier | Score | Taux shiny |
-|--------|-------|-----------|
-| 0 – Débutant | 0–20 | 1/750 |
-| 1 – Novice | 21–50 | 1/375 |
-| 2 – Chasseur | 51–74 | 1/187 |
-| 3 – Dresseur | 75–100 | 1/93 |
-| 4 – Expert | 101–150 | 1/46 |
-| 5 – Maître | 151–200 | 1/23 |
-| 6+ | 201+ | 1/16 (max) |
+| Score | Taux shiny |
+|-------|-----------|
+| 0–19 | 1/750 |
+| 20–49 | 1/650 |
+| 50–79 | 1/550 |
+| 80–109 | 1/400 |
+| 110–139 | 1/300 |
+| 140–169 | 1/200 |
+| 170–199 | 1/150 |
+| 200–229 | 1/100 |
+| 230–249 | 1/75 |
+| 250+ | 1/50 (max) |
 
 Le taux est identique pour tous les Pokémon, légendaires inclus. Les shiny trouvés sont visibles dans la section **Shiny** du Pokédex.
 
